@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>¿Quieres ser mi novia?</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  #pregunta {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #botones {
+    display: flex;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  #noBtn {
+    position: absolute;
+  }
+</style>
+</head>
+<body>
+  <div id="pregunta">¿Quieres ser mi novia?</div>
+  <div id="botones">
+    <button id="siBtn">Sí</button>
+    <button id="noBtn">No</button>
+  </div>
+  <script>
+    const siBtn = document.getElementById('siBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    siBtn.addEventListener('click', () => {
+      alert('¡Siii! Sabía que dirías que sí. 🥰');
+    });
+
+    noBtn.addEventListener('mouseover', () => {
+      const anchoVentana = window.innerWidth - 100;
+      const altoVentana = window.innerHeight - 50;
+
+      const nuevaPosicionX = Math.random() * anchoVentana;
+      const nuevaPosicionY = Math.random() * altoVentana;
+
+      noBtn.style.left = nuevaPosicionX + 'px';
+      noBtn.style.top = nuevaPosicionY + 'px';
+    });
+  </script>
+</body>
+</html>
